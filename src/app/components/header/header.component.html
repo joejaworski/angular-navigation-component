@@ -1,0 +1,14 @@
+<mat-toolbar class="mat-toolbar mat-toolbar-single-row">
+    <button mat-button (click)="onMenuClick()" class="header-button"><mat-icon>menu</mat-icon></button>
+    <span class="app-title" routerLink="">Coding Test</span>
+    <span class="header-spacer"></span>
+    <span class="info">{{user.name}} ({{user.role.name}})</span>
+    <span class="user-select">
+        <mat-form-field>
+        <mat-label>Set the User</mat-label>
+        <mat-select [(value)]="user">
+            <mat-option (onSelectionChange)="onUserSelected($event)" *ngFor="let o of users" [value]="o"> {{o.name}} ({{o.role.name}})</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </span>
+</mat-toolbar>

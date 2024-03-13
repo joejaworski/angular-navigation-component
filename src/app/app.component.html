@@ -1,0 +1,21 @@
+<div class="container">
+    <app-header (navToggled)="toggleNav()"  (userUpdated)="setActiveUser($event)"></app-header>
+    <mat-sidenav-container hasBackdrop="false">
+        <mat-sidenav [opened]="navOpen" mode="push" >
+            <div *ngFor="let n of navigationLayout.nodes">
+                
+                <div *ngIf="n.link === null" class="top-level">
+                    <app-sidebar-header [navigationNode]="n" (onNavigate)="navigate($event)"></app-sidebar-header>
+                </div>
+                
+                <div *ngIf="n.link !== null" class="top-level">
+                    <app-sidebar-link [navigationNode]="n" (onNavigate)="navigate($event)"></app-sidebar-link>
+                </div>
+
+            </div>
+        </mat-sidenav>
+        <mat-sidenav-container>
+            <router-outlet></router-outlet>
+        </mat-sidenav-container>
+    </mat-sidenav-container>    
+</div>

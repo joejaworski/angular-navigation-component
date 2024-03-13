@@ -1,0 +1,35 @@
+mat-sidenav-container {
+    height: calc(205vh - 115vh);
+}
+
+mat-sidenav {
+    width: 350px;
+    background-color: #eee;
+}
+
+.top-level {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.second-level {
+    margin-left: 20px;
+}
+
+.header {
+    color: #4287F5;
+    cursor: pointer;
+}
+
+.nav-link {
+    border-bottom: 1px solid lightgrey;
+    color: #8993a3;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon {
+    transform: scale(0.75);
+}

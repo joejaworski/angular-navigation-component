@@ -1,0 +1,23 @@
+.nav-link {
+    border-bottom: 1px solid lightgrey;
+    color: #8993a3;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.toggle {
+    float: right;
+    margin-right: 20px;
+}
+
+.nav-icon {
+    transform: scale(0.75);
+}
+
+.header {
+    color: #4287F5;
+    cursor: pointer;
+    margin-bottom: 8px;
+}

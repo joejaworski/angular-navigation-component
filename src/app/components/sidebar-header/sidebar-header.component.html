@@ -1,0 +1,11 @@
+<div>
+    <div class="header" (click)="onToggleChildren()">{{navigationNode.display}}
+        <span class="toggle" *ngIf="displayChildren"><mat-icon>navigate_next</mat-icon></span>
+        <span class="toggle" *ngIf="!displayChildren"><mat-icon>expand_more</mat-icon></span>
+    </div>
+    <div *ngIf="navigationNode.nodes.length > 0 && displayChildren">
+        <div *ngFor="let n of navigationNode.nodes">
+            <app-sidebar-link [navigationNode]="n" (onNavigate)="navigate($event)"></app-sidebar-link>
+        </div>
+    </div>
+</div>
